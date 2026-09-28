@@ -1,0 +1,227 @@
+:root {
+  --blue: #0b3d91;
+  --blue-soft: #eef3ff;
+  --gold: #ffcc00;
+  --ink: #222;
+  --line: #d9dee8;
+  --green: #17803d;
+  --red: #c62828;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f4f7;
+  color: var(--ink);
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: var(--blue);
+  color: #fff;
+  padding: 14px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar h2 { margin: 0; font-size: 20px; }
+.nav-links { display: flex; gap: 6px; flex-wrap: wrap; }
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+.nav-links a:hover { background: rgba(255, 255, 255, .18); }
+.nav-links a.active { background: var(--gold); color: #000; font-weight: bold; }
+
+.report-container { width: 92%; max-width: 1100px; margin: 28px auto; }
+
+/* HEADER */
+.college-header {
+  background: var(--blue);
+  color: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.college-header h1 { font-size: 22px; margin: 0 0 8px; }
+.college-header h3 { margin: 6px 0; font-weight: normal; }
+.college-header > p { font-size: 18px; font-weight: bold; margin: 10px 0 18px; }
+
+.student-strip {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: #fff;
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 16px 20px;
+  text-align: left;
+}
+.student-strip .strip-col { flex: 1; }
+.student-strip p { margin: 6px 0; }
+.photo {
+  width: 74px; height: 88px;
+  border: 2px solid var(--blue);
+  border-radius: 6px;
+  background: var(--blue-soft);
+  color: var(--blue);
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* CARDS */
+.card {
+  background: #fff;
+  padding: 22px 26px;
+  border-radius: 10px;
+  margin-bottom: 22px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .08);
+}
+.card h2 {
+  margin: 0 0 16px;
+  color: var(--blue);
+  border-bottom: 2px solid var(--blue);
+  padding-bottom: 8px;
+  font-size: 20px;
+}
+.profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 30px; }
+
+.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.stat-grid.six { grid-template-columns: repeat(3, 1fr); margin-bottom: 22px; }
+.stat {
+  background: var(--blue-soft);
+  border-radius: 8px;
+  padding: 18px;
+  text-align: center;
+}
+.stat strong { font-size: 30px; color: var(--blue); }
+.stat p { margin: 6px 0 0; color: #555; }
+
+/* SEMESTER LINKS */
+.semester-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.semester-links a {
+  text-decoration: none;
+  background: #fff;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+.semester-links a span { display: block; font-weight: normal; font-size: 13px; margin-top: 4px; }
+.semester-links a:hover, .semester-links a.accent { background: var(--blue); color: #fff; }
+
+/* TABLE */
+.table-wrap { overflow-x: auto; margin-bottom: 22px; border-radius: 8px; }
+table { width: 100%; border-collapse: collapse; background: #fff; min-width: 720px; }
+th {
+  background: var(--blue);
+  color: #fff;
+  padding: 12px 8px;
+  border: 1px solid var(--line);
+  font-size: 14px;
+}
+td { padding: 11px 8px; text-align: center; border: 1px solid var(--line); }
+.left { text-align: left; }
+td.left { padding-left: 14px; }
+tbody tr:nth-child(even) { background: #f6f8fb; }
+tbody tr:hover { background: #fff6cc; }
+td a { color: var(--blue); font-weight: bold; text-decoration: none; }
+td a:hover { text-decoration: underline; }
+
+.pass { color: var(--green); font-weight: bold; }
+.fail { color: var(--red); font-weight: bold; }
+
+.grade {
+  display: inline-block;
+  min-width: 34px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 13px;
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+.grade.g-O { background: var(--blue); color: #fff; }
+.grade.g-RA { background: #fde8e8; color: var(--red); }
+
+/* SEMESTER SUMMARY */
+.semester-summary {
+  background: #fff;
+  border-left: 5px solid var(--blue);
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.semester-summary p { margin: 6px 16px; }
+
+/* BAR CHART */
+.bars { display: flex; align-items: flex-end; justify-content: space-around; height: 220px; padding-top: 10px; }
+.bar-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; width: 14%; gap: 6px; }
+.bar { width: 100%; background: var(--blue); border-radius: 6px 6px 0 0; min-height: 4px; }
+.bar-val { font-weight: bold; color: var(--blue); }
+
+/* SIGNATURES + PAGER */
+.signatures { display: flex; justify-content: space-around; text-align: center; margin: 70px 0 30px; }
+.signatures p { margin: 0 0 4px; }
+
+.pager { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 24px 0; }
+.pager a, .print-btn {
+  background: #fff;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.pager a:hover, .print-btn:hover { background: var(--blue); color: #fff; }
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .navbar { justify-content: center; }
+  .profile-grid, .semester-links { grid-template-columns: 1fr 1fr; }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+  .student-strip { flex-wrap: wrap; }
+}
+@media (max-width: 500px) {
+  .college-header h1 { font-size: 16px; }
+  .profile-grid, .semester-links, .stat-grid, .stat-grid.six { grid-template-columns: 1fr; }
+  .pager { flex-direction: column; }
+}
+
+/* PRINT */
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+  .report-container { width: 100%; margin: 0; }
+  .card, .semester-summary, .stat { box-shadow: none; border: 1px solid var(--line); }
+  .college-header, th, .grade.g-O, .bar {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  tbody tr:hover { background: none; }
+}

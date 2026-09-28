@@ -1,0 +1,400 @@
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: Arial, sans-serif;
+
+  background-color: #e8efff;
+
+  color: #222;
+}
+
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container {
+  width: 650px;
+
+  max-width: 95%;
+
+  margin: 25px auto;
+
+  padding: 25px 35px 35px;
+
+  background-color: white;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ==========================================
+   HEADING
+========================================== */
+
+h1 {
+  text-align: center;
+
+  color: #244d91;
+
+  font-size: 28px;
+
+  margin-top: 0;
+
+  margin-bottom: 25px;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+form {
+  width: 100%;
+}
+
+
+/* ==========================================
+   LABEL
+========================================== */
+
+label {
+  display: block;
+
+  margin-top: 17px;
+
+  margin-bottom: 7px;
+
+  text-align: center;
+
+  font-weight: bold;
+
+  font-size: 15px;
+
+  color: #222;
+}
+
+
+/* ==========================================
+   REQUIRED STAR
+========================================== */
+
+.required {
+  color: red;
+
+  font-size: 17px;
+
+  font-weight: bold;
+}
+
+
+/* ==========================================
+   INPUT BOX
+========================================== */
+
+.input-box {
+  position: relative;
+
+  width: 100%;
+}
+
+
+/* ==========================================
+   INPUT SELECT TEXTAREA
+========================================== */
+
+.input-box input,
+.input-box select,
+.input-box textarea {
+  width: 100%;
+
+  padding: 10px 35px 10px 10px;
+
+  border: 1px solid #aaa;
+
+  border-radius: 5px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  background-color: white;
+
+  color: #222;
+
+  outline: none;
+
+  transition: border 0.2s;
+}
+
+
+/* ==========================================
+   PLACEHOLDER
+========================================== */
+
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+  color: #999;
+}
+
+
+/* ==========================================
+   FOCUS
+========================================== */
+
+.input-box input:focus,
+.input-box select:focus,
+.input-box textarea:focus {
+  border: 1px solid #315ca8;
+
+  box-shadow: 0 0 4px rgba(49, 92, 168, 0.25);
+}
+
+
+/* ==========================================
+   TEXTAREA
+========================================== */
+
+.input-box textarea {
+  height: 80px;
+
+  resize: vertical;
+}
+
+
+/* ==========================================
+   REQUIRED STAR INSIDE BOX
+========================================== */
+
+.input-box .required {
+  position: absolute;
+
+  right: 12px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: red;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  pointer-events: none;
+}
+
+
+/* ==========================================
+   TEXTAREA STAR
+========================================== */
+
+.input-box textarea + .required {
+  top: 12px;
+
+  transform: none;
+}
+
+
+/* ==========================================
+   INVALID FIELD
+========================================== */
+
+.input-box.invalid input,
+.input-box.invalid select,
+.input-box.invalid textarea {
+  border-bottom: 3px solid red;
+}
+
+
+/* ==========================================
+   PHOTO INPUT
+========================================== */
+
+.input-box input[type="file"] {
+  padding: 8px;
+
+  cursor: pointer;
+
+  background-color: white;
+}
+
+
+/* ==========================================
+   PHOTO HINT
+========================================== */
+
+.photo-hint {
+  margin-top: 6px;
+
+  margin-bottom: 5px;
+
+  text-align: center;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+
+/* ==========================================
+   PHOTO CONTAINER
+========================================== */
+
+.photo-container {
+  width: 100%;
+
+  margin-top: 15px;
+
+  text-align: center;
+}
+
+
+/* ==========================================
+   PHOTO PREVIEW
+========================================== */
+
+.preview {
+  display: block;
+
+  width: auto;
+
+  height: auto;
+
+  max-width: 500px;
+
+  max-height: 500px;
+
+  object-fit: contain;
+
+  margin: 0 auto;
+
+  border: 2px solid #333;
+
+  border-radius: 5px;
+}
+
+
+/* ==========================================
+   RESET PHOTO
+========================================== */
+
+.reset {
+  margin-top: 10px;
+
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background-color: #e74c3c;
+
+  color: white;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+
+.reset:hover {
+  background-color: #c0392b;
+}
+
+
+/* ==========================================
+   SUBMIT
+========================================== */
+
+.submit {
+  display: block;
+
+  width: 100%;
+
+  margin-top: 25px;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background-color: #2563eb;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+.submit:hover {
+  background-color: #1d4ed8;
+}
+
+
+/* ==========================================
+   SELECT OPTIONS
+========================================== */
+
+select option {
+  background-color: white;
+
+  color: #222;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+  .container {
+    width: 95%;
+
+    padding: 20px;
+  }
+
+
+  h1 {
+    font-size: 24px;
+  }
+
+
+  .input-box input,
+  .input-box select,
+  .input-box textarea {
+    font-size: 14px;
+  }
+
+
+  .preview {
+    max-width: 100%;
+
+    height: auto;
+  }
+
+}
