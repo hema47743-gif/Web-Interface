@@ -4,7 +4,7 @@ import './App.css';
 import HobbyCard from './HobbyCard.jsx';
 import Reading from './assets/reading image.jpeg';
 import Painting from './assets/painting image.jpeg';
-import Photography from './assets/Photography image.jpeg';
+import Photography from './assets/photography image.jpeg';
 import Music from './assets/music image.jpeg';
 import Gardening from './assets/gardening image.jpeg';
 import Gaming from './assets/gaming image.jpeg';
